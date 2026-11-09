@@ -23,3 +23,6 @@ sim/rl/runs/
 .DS_Store
 *~
 .claude/
+# Portfolio: generated measurements and experiment files stay local
+sysid_logs/
+/outputs/
