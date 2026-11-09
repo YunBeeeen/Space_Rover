@@ -1,0 +1,331 @@
+{
+ "comment": "\uc0c8 \uacbd\uae30\uc7a5(KSRC final board-level sand)\uc6a9 \ub2e8\uacc4 \uc88c\ud45c. \uad6c\uc5ed \ubc88\ud638\ub294 regions.json(2026-10-22)\uacfc \uac19\ub2e4. \uc88c\ud45c \ub2e8\uc704 m, \uc9c0\ub3c4 \uc88c\ud45c\uacc4.",
+ "regions_file": "regions.json",
+ "start_region": 1,
+ "goals": {
+  "entry30": {
+   "target": [
+    2.8,
+    2.75
+   ],
+   "regions": [
+    1
+   ],
+   "edge": [
+    1,
+    2
+   ]
+  },
+  "retreat30": {
+   "target": [
+    2.8,
+    2.85
+   ],
+   "regions": [
+    1,
+    2
+   ],
+   "edge": [
+    2,
+    1
+   ],
+   "reverse": true,
+   "arrive_m": 0.08
+  },
+  "entry15": {
+   "target": [
+    3.6,
+    2.75
+   ],
+   "regions": [
+    1
+   ],
+   "edge": [
+    1,
+    3
+   ]
+  },
+  "retreat15": {
+   "target": [
+    3.6,
+    2.75
+   ],
+   "regions": [
+    1,
+    3,
+    4
+   ],
+   "edge": [
+    3,
+    1
+   ],
+   "reverse": true
+  },
+  "look_go": {
+   "target": [
+    2.8,
+    1.3
+   ],
+   "regions": [
+    4
+   ],
+   "edge": null,
+   "arrive_m": 0.06
+  },
+  "return10": {
+   "target": [
+    1.9,
+    0.4
+   ],
+   "regions": [
+    4,
+    10
+   ],
+   "edge": [
+    4,
+    10
+   ]
+  },
+  "return9": {
+   "target": [
+    1.0,
+    0.43
+   ],
+   "regions": [
+    10,
+    9
+   ],
+   "edge": [
+    10,
+    9
+   ]
+  },
+  "return8": {
+   "target": [
+    1.0,
+    1.29
+   ],
+   "regions": [
+    9,
+    8
+   ],
+   "edge": [
+    9,
+    8
+   ]
+  },
+  "return7": {
+   "target": [
+    1.0,
+    2.75
+   ],
+   "regions": [
+    8,
+    7
+   ],
+   "edge": [
+    8,
+    7
+   ]
+  },
+  "return6": {
+   "target": [
+    1.9,
+    2.75
+   ],
+   "regions": [
+    7,
+    6
+   ],
+   "edge": [
+    7,
+    6
+   ]
+  },
+  "return1": {
+   "target": [
+    3.6,
+    2.82
+   ],
+   "regions": [
+    6,
+    1
+   ],
+   "edge": [
+    6,
+    1
+   ]
+  },
+  "look_exit": {
+   "target": [
+    2.8,
+    0.45
+   ],
+   "regions": [
+    4
+   ],
+   "edge": null
+  },
+  "outer6": {
+   "target": [
+    1.9,
+    2.75
+   ],
+   "regions": [
+    1,
+    6
+   ],
+   "edge": [
+    1,
+    6
+   ]
+  },
+  "outer7": {
+   "target": [
+    1.0,
+    2.75
+   ],
+   "regions": [
+    6,
+    7
+   ],
+   "edge": [
+    6,
+    7
+   ]
+  },
+  "outer8": {
+   "target": [
+    1.0,
+    1.29
+   ],
+   "regions": [
+    7,
+    8
+   ],
+   "edge": [
+    7,
+    8
+   ]
+  },
+  "outer9": {
+   "target": [
+    1.0,
+    0.43
+   ],
+   "regions": [
+    8,
+    9
+   ],
+   "edge": [
+    8,
+    9
+   ]
+  },
+  "outer10": {
+   "target": [
+    1.9,
+    0.4
+   ],
+   "regions": [
+    9,
+    10
+   ],
+   "edge": [
+    9,
+    10
+   ]
+  },
+  "outer4": {
+   "target": [
+    2.8,
+    0.4
+   ],
+   "regions": [
+    10,
+    4
+   ],
+   "edge": [
+    10,
+    4
+   ]
+  },
+  "descent15_entry": {
+   "target": [
+    3.6,
+    0.45
+   ],
+   "regions": [
+    4
+   ],
+   "edge": [
+    4,
+    3
+   ]
+  },
+  "descent15": {
+   "target": [
+    3.6,
+    2.65
+   ],
+   "regions": [
+    4,
+    3,
+    1
+   ],
+   "edge": [
+    3,
+    1
+   ],
+   "arrive_m": 0.1
+  },
+  "return15": {
+   "target": [
+    3.6,
+    2.82
+   ],
+   "regions": [
+    1
+   ],
+   "edge": null,
+   "arrive_m": 0.07
+  }
+ },
+ "corner_gate": {
+  "return9": {
+   "prev": [
+    1.9,
+    0.4
+   ],
+   "target": [
+    1.0,
+    0.43
+   ]
+  },
+  "return7": {
+   "prev": [
+    1.0,
+    1.29
+   ],
+   "target": [
+    1.0,
+    2.75
+   ]
+  }
+ },
+ "look": {
+  "stand": [
+   2.8,
+   1.3
+  ],
+  "face": [
+   2.8,
+   1.635
+  ],
+  "hold_s": 4.0,
+  "turn_rate_rad_s": 0.1,
+  "tol_deg": 3.0,
+  "back_heading_rad": -1.5707963267948966
+ },
+ "steep_pitch_deg": 22.0
+}

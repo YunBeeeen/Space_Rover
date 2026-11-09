@@ -19,6 +19,19 @@
 | 배터리 | 3S 650mAh 120C 리포 |
 | MCU / SBC | STM32 Nucleo-F446RE / Raspberry Pi 5 + AI HAT |
 
+## Mapping & Navigation 통합 (2026-11-09)
+
+기존 저수준 제어·Residual RL 구현에 3D 매핑·위치 추정·자율주행 코드를 함께 보관합니다.
+
+| 경로 | 역할 |
+|---|---|
+| `firmware/`, `pi/`, `sim/`, `ros/` | 기존 스워브 제어·Teacher–Student Residual RL·실기 운용 |
+| [mapping/](mapping/README.md) | D435/ORB-SLAM3·TSDF·지형 분석·ESKF·MPPI·실기 배포 스택 |
+| [mapping/INTEGRATION.md](mapping/INTEGRATION.md) | 가져온 소스 기준, 실행 위치, 선택 자산 다운로드 |
+
+매핑 코드는 별도 실행 루트 `mapping/`을 사용합니다. 기존 RL과 매핑이 저장소에 함께 있으며, 이번 가져오기가 두 스택의 실기 통합 검증을 뜻하지는 않습니다.
+
+
 ---
 
 ## 시스템 구조
