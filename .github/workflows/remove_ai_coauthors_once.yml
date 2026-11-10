@@ -1,0 +1,33 @@
+name: Remove AI co-author trailers once
+on:
+  push:
+    branches:
+      - maintenance/remove-ai-coauthors-2026-11-10
+permissions:
+  contents: write
+concurrency:
+  group: one-time-coauthor-cleanup-main
+  cancel-in-progress: false
+jobs:
+  rewrite:
+    if: github.repository == 'YunBeeeen/ksrc'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      EXPECTED_MAIN: 7273a77f2def6167ca1c70c50a5b0413ee63de71
+      EXPECTED_REPOSITORY: YunBeeeen/ksrc
+      BACKUP_BRANCH: backup/pre-coauthor-cleanup-2026-11-10
+      MAINTENANCE_SHA: ${{ github.sha }}
+    steps:
+      - name: Read complete original history
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ env.EXPECTED_MAIN }}
+          fetch-depth: 0
+          lfs: false
+      - name: Rewrite trailers and verify unchanged files, authors and dates
+        shell: bash
+        run: |
+          set -euo pipefail
+          git show "$MAINTENANCE_SHA:.github/maintenance/remove_ai_coauthors.py" > "$RUNNER_TEMP/remove_ai_coauthors.py"
+          python3 "$RUNNER_TEMP/remove_ai_coauthors.py"
