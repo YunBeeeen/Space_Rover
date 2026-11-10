@@ -6,6 +6,24 @@
 
 [주요 기능](#주요-기능) · [시스템 구성](#시스템-구성) · [코드 구조](#코드-구조) · [실행 방법](#실행-방법)
 
+## 사진 및 데모
+
+![KSRC 4륜 독립조향 로버 실물](docs/media/rover.jpg)
+
+[**공식 경기 영상 보기 · 2:10:49부터**](https://www.youtube.com/watch?v=pSvTl1Ak0e0&t=7849s)  
+iDLE 팀 주행·임무 수행 구간: 약 2:10:49–2:27:29. 출처: 우주항공청 KASA, 「2026 대한민국 우주로버 챌린지」.
+
+| 모래 환경 시험 | 지형 지도 |
+|---|---|
+| ![실제 모래 환경 로버 시험](docs/media/sand-test.png) | ![3D 지형 지도 시각화](docs/media/terrain-map.png) |
+
+### Teacher–Student Residual RL
+
+![Teacher–Student Residual RL 구조](docs/media/residual-rl.png)
+
+기구학 명령에 조향·구동 잔차를 더하고, 특권 관측으로 학습한 Teacher를 센서 관측 기반 Student로 증류합니다. 모래 시험 사진과 지도는 실험 기록이며, 정량 성능 비교는 별도 반복 평가가 필요합니다.
+
+
 ## 주요 기능
 
 - **스워브 제어**: `cmd_vel`에서 바퀴별 조향각·구동 명령을 계산하고 조향 범위·구동 정렬 게이트 적용
